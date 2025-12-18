@@ -36,6 +36,10 @@ const RecentEventsTable = ({ events }: RecentEventsTableProps) => {
         <h3 className="text-base font-semibold text-gray-900 mb-3">Recent Events</h3>
         <div className="flex items-center gap-2 flex-wrap">
           <div className="flex items-center gap-1.5 px-2 py-1 border border-gray-300 rounded cursor-pointer hover:bg-gray-50">
+            <span className="text-xs text-gray-700">Location wise</span>
+            <ChevronDown size={14} className="text-gray-600" />
+          </div>
+          <div className="flex items-center gap-1.5 px-2 py-1 border border-gray-300 rounded cursor-pointer hover:bg-gray-50">
             <span className="text-xs text-gray-700">Event type</span>
             <ChevronDown size={14} className="text-gray-600" />
           </div>
