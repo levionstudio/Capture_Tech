@@ -14,17 +14,17 @@ const LocationEventsChart = ({ data }: LocationEventsChartProps) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.25 }}
-      className="bg-white rounded-lg shadow-md p-6"
+      className="bg-white rounded-lg shadow-md p-4"
     >
-      <div className="flex items-center justify-between mb-6">
-        <h3 className="text-lg font-semibold text-gray-900">Location-wise Events</h3>
-        <div className="flex items-center gap-3">
-          <div className="flex items-center gap-2 px-3 py-1.5 border border-gray-300 rounded cursor-pointer hover:bg-gray-50">
-            <span className="text-sm text-gray-700">06/12/2025</span>
-            <Calendar size={16} className="text-gray-600" />
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-base font-semibold text-gray-900">Location-wise Events</h3>
+        <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 px-2 py-1 border border-gray-300 rounded cursor-pointer hover:bg-gray-50">
+            <span className="text-xs text-gray-700">06/12/2025</span>
+            <Calendar size={14} className="text-gray-600" />
           </div>
-          <button className="p-1.5 hover:bg-gray-100 rounded">
-            <MoreVertical size={16} className="text-gray-600" />
+          <button className="p-1 hover:bg-gray-100 rounded">
+            <MoreVertical size={14} className="text-gray-600" />
           </button>
         </div>
       </div>
@@ -49,29 +49,29 @@ const LocationEventsChart = ({ data }: LocationEventsChartProps) => {
         ))}
       </div>
 
-      <div className="flex gap-4 mt-6 flex-wrap text-xs">
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-orange-500"></div>
+      <div className="flex gap-3 mt-4 flex-wrap text-xs">
+        <div className="flex items-center gap-1.5">
+          <div className="w-2.5 h-2.5 rounded-full bg-orange-500"></div>
           <span className="text-gray-600">Service area unidentified</span>
         </div>
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+        <div className="flex items-center gap-1.5">
+          <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
           <span className="text-gray-600">Manager area unattended</span>
         </div>
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-red-500"></div>
+        <div className="flex items-center gap-1.5">
+          <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
           <span className="text-gray-600">Human intrusion</span>
         </div>
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-green-500"></div>
+        <div className="flex items-center gap-1.5">
+          <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
           <span className="text-gray-600">Late entry</span>
         </div>
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+        <div className="flex items-center gap-1.5">
+          <div className="w-2.5 h-2.5 rounded-full bg-blue-500"></div>
           <span className="text-gray-600">Early close</span>
         </div>
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-cyan-500"></div>
+        <div className="flex items-center gap-1.5">
+          <div className="w-2.5 h-2.5 rounded-full bg-cyan-500"></div>
           <span className="text-gray-600">Footfall</span>
         </div>
       </div>
