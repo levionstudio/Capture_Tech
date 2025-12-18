@@ -29,7 +29,7 @@ const RecentEventsTable = ({ events }: RecentEventsTableProps) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.4 }}
-      className="bg-white rounded-lg shadow-md p-6"
+      className="bg-white rounded-lg shadow-md p-6 h-full flex flex-col"
     >
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-lg font-semibold text-gray-900">Recent Events</h3>
@@ -52,9 +52,9 @@ const RecentEventsTable = ({ events }: RecentEventsTableProps) => {
         </div>
       </div>
 
-      <div className="overflow-x-auto">
+      <div className="flex-1 overflow-auto">
         <table className="w-full">
-          <thead>
+          <thead className="sticky top-0 bg-white">
             <tr className="border-b border-gray-200">
               <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700">Sr. No</th>
               <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700">Location</th>
