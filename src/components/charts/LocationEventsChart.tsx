@@ -29,26 +29,24 @@ const LocationEventsChart = ({ data }: LocationEventsChartProps) => {
         </div>
       </div>
 
-      <div className="space-y-4">
-        {data.flatMap((location, locIndex) =>
-          location.events.map((_, eventIndex) => (
-            <div key={`${locIndex}-${eventIndex}`} className="flex items-center gap-4">
-              <div className="w-24 text-sm text-gray-700 font-medium">{location.location}</div>
-              <div className="flex-1 h-8 bg-gray-100 rounded-lg overflow-hidden flex">
-                {location.events.map((event, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ width: 0 }}
-                    animate={{ width: `${(event.count / maxValue) * 100}%` }}
-                    transition={{ delay: 0.1 * idx, duration: 0.5 }}
-                    className="h-full"
-                    style={{ backgroundColor: event.color }}
-                  />
-                ))}
-              </div>
+      <div className="space-y-2">
+        {data.map((location, locIndex) => (
+          <div key={locIndex} className="flex items-center gap-4">
+            <div className="w-24 text-sm text-gray-700 font-medium">{location.location}</div>
+            <div className="flex-1 h-8 bg-gray-100 rounded-lg overflow-hidden flex">
+              {location.events.map((event, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ width: 0 }}
+                  animate={{ width: `${(event.count / maxValue) * 100}%` }}
+                  transition={{ delay: 0.1 * idx, duration: 0.5 }}
+                  className="h-full"
+                  style={{ backgroundColor: event.color }}
+                />
+              ))}
             </div>
-          ))
-        )}
+          </div>
+        ))}
       </div>
 
       <div className="flex gap-4 mt-6 flex-wrap text-xs">
