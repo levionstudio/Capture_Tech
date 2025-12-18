@@ -35,12 +35,12 @@ const EventsBarChart = ({ data }: EventsBarChartProps) => {
       </div>
 
       <ResponsiveContainer width="100%" height={300}>
-        <BarChart data={chartData}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
-          <XAxis dataKey="name" tick={{ fontSize: 12 }} angle={-15} textAnchor="end" height={80} />
-          <YAxis tick={{ fontSize: 12 }} />
+        <BarChart data={chartData} layout="horizontal">
+          <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" horizontal={false} />
+          <XAxis type="number" tick={{ fontSize: 12 }} />
+          <YAxis type="category" dataKey="name" tick={{ fontSize: 12 }} width={150} />
           <Tooltip />
-          <Bar dataKey="value" radius={[8, 8, 0, 0]} />
+          <Bar dataKey="value" radius={[0, 8, 8, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </motion.div>
