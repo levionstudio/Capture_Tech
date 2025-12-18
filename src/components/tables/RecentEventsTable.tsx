@@ -29,23 +29,23 @@ const RecentEventsTable = ({ events }: RecentEventsTableProps) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.4 }}
-      className="bg-white rounded-lg shadow-md p-6 flex flex-col"
-      style={{ height: 'calc(100vh - 280px)' }}
+      className="bg-white rounded-lg shadow-md p-4 flex flex-col"
+      style={{ height: 'calc(100vh - 220px)' }}
     >
-      <div className="mb-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Events</h3>
+      <div className="mb-4">
+        <h3 className="text-base font-semibold text-gray-900 mb-3">Recent Events</h3>
         <div className="flex items-center gap-2 flex-wrap">
-          <div className="flex items-center gap-2 px-3 py-1.5 border border-gray-300 rounded cursor-pointer hover:bg-gray-50">
-            <span className="text-sm text-gray-700">Event type</span>
-            <ChevronDown size={16} className="text-gray-600" />
+          <div className="flex items-center gap-1.5 px-2 py-1 border border-gray-300 rounded cursor-pointer hover:bg-gray-50">
+            <span className="text-xs text-gray-700">Event type</span>
+            <ChevronDown size={14} className="text-gray-600" />
           </div>
-          <div className="flex items-center gap-2 px-3 py-1.5 border border-gray-300 rounded cursor-pointer hover:bg-gray-50">
-            <span className="text-sm text-gray-700">Priority</span>
-            <ChevronDown size={16} className="text-gray-600" />
+          <div className="flex items-center gap-1.5 px-2 py-1 border border-gray-300 rounded cursor-pointer hover:bg-gray-50">
+            <span className="text-xs text-gray-700">Priority</span>
+            <ChevronDown size={14} className="text-gray-600" />
           </div>
-          <div className="flex items-center gap-2 px-3 py-1.5 border border-gray-300 rounded cursor-pointer hover:bg-gray-50">
-            <span className="text-sm text-gray-700">06/12/2025</span>
-            <Calendar size={16} className="text-gray-600" />
+          <div className="flex items-center gap-1.5 px-2 py-1 border border-gray-300 rounded cursor-pointer hover:bg-gray-50">
+            <span className="text-xs text-gray-700">06/12/2025</span>
+            <Calendar size={14} className="text-gray-600" />
           </div>
         </div>
       </div>
@@ -99,14 +99,14 @@ const RecentEventsTable = ({ events }: RecentEventsTableProps) => {
         </table>
       </div>
 
-      <div className="flex items-center justify-center gap-2 mt-4 pt-4 border-t">
-        <button className="w-8 h-8 flex items-center justify-center rounded bg-blue-600 text-white font-medium text-sm hover:bg-blue-700">
+      <div className="flex items-center justify-center gap-2 mt-3 pt-3 border-t">
+        <button className="w-7 h-7 flex items-center justify-center rounded bg-blue-600 text-white font-medium text-xs hover:bg-blue-700">
           1
         </button>
-        <button className="w-8 h-8 flex items-center justify-center rounded hover:bg-gray-100 text-gray-700 font-medium text-sm">
+        <button className="w-7 h-7 flex items-center justify-center rounded hover:bg-gray-100 text-gray-700 font-medium text-xs">
           2
         </button>
-        <button className="w-8 h-8 flex items-center justify-center rounded hover:bg-gray-100 text-gray-700 font-medium text-sm">
+        <button className="w-7 h-7 flex items-center justify-center rounded hover:bg-gray-100 text-gray-700 font-medium text-xs">
           3
         </button>
       </div>

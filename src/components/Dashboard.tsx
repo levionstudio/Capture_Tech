@@ -69,11 +69,11 @@ const Dashboard = () => {
       <Sidebar />
 
       <div className="flex-1 overflow-y-auto">
-        <div className="p-8">
+        <div className="p-6">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="grid grid-cols-4 gap-6 mb-8"
+            className="grid grid-cols-4 gap-4 mb-6"
           >
             <StatusCard {...cameraStatusData} onClick={() => setActiveModal('camera')} />
             <StatusCard {...agentStatusData} onClick={() => setActiveModal('agent')} />
@@ -81,16 +81,22 @@ const Dashboard = () => {
             <StatusCard {...footfallStatusData} onClick={() => setActiveModal('footfall')} />
           </motion.div>
 
-          <div className="grid grid-cols-3 gap-6">
-            <div className="col-span-2 space-y-6">
+          <div className="grid grid-cols-3 gap-4 mb-4">
+            <div className="col-span-2">
               <EventsBarChart data={eventTypeData} />
-              <LocationEventsChart data={locationEventData} />
-              <DonutChart data={branchPerformanceData} />
-              <FootfallPerBranchChart data={footfallPerBranch} />
             </div>
             <div className="col-span-1">
               <RecentEventsTable events={recentEvents} />
             </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4 mb-4">
+            <LocationEventsChart data={locationEventData} />
+            <DonutChart data={branchPerformanceData} />
+          </div>
+
+          <div className="grid grid-cols-1">
+            <FootfallPerBranchChart data={footfallPerBranch} />
           </div>
         </div>
       </div>

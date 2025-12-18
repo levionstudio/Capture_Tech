@@ -22,31 +22,31 @@ const DonutChart = ({ data }: DonutChartProps) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3 }}
-      className="bg-white rounded-lg shadow-md p-6"
+      className="bg-white rounded-lg shadow-md p-4"
     >
-      <div className="flex items-center justify-between mb-6">
-        <h3 className="text-lg font-semibold text-gray-900">Top Underperforming Branches</h3>
-        <div className="flex items-center gap-3">
-          <div className="flex items-center gap-2 px-3 py-1.5 border border-gray-300 rounded cursor-pointer hover:bg-gray-50">
-            <span className="text-sm text-gray-700">06/12/2025</span>
-            <Calendar size={16} className="text-gray-600" />
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-base font-semibold text-gray-900">Top Underperforming Branches</h3>
+        <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 px-2 py-1 border border-gray-300 rounded cursor-pointer hover:bg-gray-50">
+            <span className="text-xs text-gray-700">06/12/2025</span>
+            <Calendar size={14} className="text-gray-600" />
           </div>
-          <button className="p-1.5 hover:bg-gray-100 rounded">
-            <MoreVertical size={16} className="text-gray-600" />
+          <button className="p-1 hover:bg-gray-100 rounded">
+            <MoreVertical size={14} className="text-gray-600" />
           </button>
         </div>
       </div>
 
-      <div className="flex items-center gap-8">
-        <div className="relative w-48 h-48">
+      <div className="flex items-center gap-6">
+        <div className="relative w-40 h-40">
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
               <Pie
                 data={chartData}
                 cx="50%"
                 cy="50%"
-                innerRadius={60}
-                outerRadius={80}
+                innerRadius={50}
+                outerRadius={70}
                 dataKey="value"
               >
                 {chartData.map((entry, index) => (
@@ -63,19 +63,19 @@ const DonutChart = ({ data }: DonutChartProps) => {
         </div>
 
         <div className="flex-1">
-          <table className="w-full text-sm">
+          <table className="w-full text-xs">
             <thead>
               <tr className="border-b border-gray-200">
-                <th className="text-left py-2 font-semibold text-gray-700">Branch</th>
-                <th className="text-right py-2 font-semibold text-gray-700">Total footfall</th>
-                <th className="text-right py-2 font-semibold text-gray-700">Service area unidentified</th>
-                <th className="text-right py-2 font-semibold text-gray-700">Manager area unattended</th>
+                <th className="text-left py-1.5 font-semibold text-gray-700">Branch</th>
+                <th className="text-right py-1.5 font-semibold text-gray-700">Total footfall</th>
+                <th className="text-right py-1.5 font-semibold text-gray-700">Service area unidentified</th>
+                <th className="text-right py-1.5 font-semibold text-gray-700">Manager area unattended</th>
               </tr>
             </thead>
             <tbody>
               {data.map((item, index) => (
                 <tr key={index} className="border-b border-gray-100">
-                  <td className="py-2 text-gray-900">{item.branch}</td>
+                  <td className="py-1.5 text-gray-900">{item.branch}</td>
                   <td className="text-right text-gray-900">{item.totalFootfall}</td>
                   <td className="text-right text-gray-900">{item.serviceAreaUnidentified}</td>
                   <td className="text-right text-gray-900">{item.managerAreaUnattended}</td>
@@ -84,17 +84,17 @@ const DonutChart = ({ data }: DonutChartProps) => {
             </tbody>
           </table>
 
-          <div className="flex gap-4 mt-4 text-xs">
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+          <div className="flex gap-3 mt-3 text-xs">
+            <div className="flex items-center gap-1.5">
+              <div className="w-2.5 h-2.5 rounded-full bg-blue-500"></div>
               <span className="text-gray-600">Footfall</span>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-orange-500"></div>
+            <div className="flex items-center gap-1.5">
+              <div className="w-2.5 h-2.5 rounded-full bg-orange-500"></div>
               <span className="text-gray-600">Service area unidentified</span>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-purple-500"></div>
+            <div className="flex items-center gap-1.5">
+              <div className="w-2.5 h-2.5 rounded-full bg-purple-500"></div>
               <span className="text-gray-600">Manager area unattended</span>
             </div>
           </div>
