@@ -82,16 +82,13 @@ const Dashboard = () => {
           </motion.div>
 
           <div className="grid grid-cols-3 gap-6 mb-8">
-            <div className="col-span-2">
+            <div className="col-span-2 space-y-6">
               <EventsBarChart data={eventTypeData} />
-            </div>
-            <div className="col-span-1">
               <LocationEventsChart data={locationEventData} />
             </div>
-          </div>
-
-          <div className="grid grid-cols-1 gap-6 mb-8">
-            <RecentEventsTable events={recentEvents} />
+            <div className="col-span-1">
+              <RecentEventsTable events={recentEvents} />
+            </div>
           </div>
 
           <div className="grid grid-cols-1 gap-6 mb-8">
